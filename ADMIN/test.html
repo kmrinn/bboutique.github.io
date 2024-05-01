@@ -1,0 +1,140 @@
+<span style="font-family: verdana, geneva, sans-serif;"><!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="test3.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <div class="navbar">
+        <div class="logo">
+          <img src="../admin/logo.png" alt="">
+        </div>
+        <ul>
+          <li><a href="#">
+            <i class="fas fa-user"></i>
+            <span class="nav-item">Dashboard</span>
+          </a>
+          </li>
+          <li><a href="products.html">
+            <i class="fas fa-cog"></i>
+            <span class="nav-item">Inventory</span>
+          </a>
+          </li>
+           <li><a href="user.html">
+            <i class="fas fa-user"></i>
+            <span class="nav-item">Users</span>
+          </a>
+          </li>
+          
+          <li><a href="inventory.html">
+            <i class="fas fa-cog"></i>
+            <span class="nav-item">Orders</span>
+          </a>
+          </li>
+          <li><a id="logout1" onclick="LOGOUT()" class="logout">
+            <i class="fas fa-sign-out-alt"></i>
+            <span class="nav-item">Logout</span>
+          </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="main">
+      <div class="main-top">
+        <p>Welcome, Admin!</p>
+      </div>
+      <div class="main-body">
+        <h1>DASHBOARD</h1>
+      
+      <div class="search_bar">
+        <input type="search" placeholder="...">
+        <select name="" id="">
+          <option>Orders</option>
+          <option>Users</option>
+          <option>Products</option>
+          <option>Inventory</option>
+          
+        </select>
+        <select class="filter">
+          <option>Filter</option>
+        </select>
+      </div>
+
+      </div>
+
+      <div class="row">
+        <h2>Updates</h2>
+       
+      </div>
+
+      <div class="card">
+        <div class="details">
+          <div class="img">
+         
+          </div>
+          <div class="text">
+            <h2>Users</h2>
+            <span>Accounts of Users</span>
+          </div>
+        </div>
+        <div class="number">
+          <h4>34-100/yr</h4>
+          <span>1 days ago</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="details">
+          <div class="img">
+           
+          </div>
+          <div class="text">
+            <h2>Inventory</h2>
+            <span>Products</span>
+          </div>
+        </div>
+        <div class="number">
+          <h4>Stocks</h4>
+          <span>2 days ago</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="details">
+          <div class="img">
+           
+          </div>
+          <div class="text">
+            <h2>Orders</h2>
+            <span>Order Status</span>
+          </div>
+        </div>
+        <div class="number">
+          <h4>100 Pending</h4>
+          <span>2 days ago</span>
+        </div>
+      </div>
+
+    
+
+      
+    </div>
+    </section>
+  </div>
+  <script>
+    function LOGOUT() {
+           // Redirect to another page
+           window.location.href = "ADMINLOGIN.html"; // Replace "signin.html" with the desired URL
+       }
+       function SEE() {
+           // Redirect to another page
+           window.location.href = "admin1.html"; // Replace "signin.html" with the desired URL
+       }
+   </script>
+</body>
+</html></span>

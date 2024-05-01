@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+<div class="wrapper">
+    <nav class="nav">
+        <div class="nav-logo">
+            <img src="../admin/logo.png">
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="landing.html" class="link active">Home</a></li>
+                <li><a href="buypage.html" class="link">Shop</a>
+               
+                </li>
+                <li><a href="index.html" class="link">Account</a></li>
+                <li><a href="Contact.html" class="link">Contact Us</a></li>
+                <li><a href="about.html" class="link">About</a></li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <div class="user-btn"><img src="../images/icons/account_circle.png"></div>
+            <!-- Pop-up container -->
+            <div class="popup" id="popup">
+                <li><a href="profile.html" class="link"> Profile</a></li>
+                <li><a href="index.html" class="link">Logout</a></li>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="container">
+    <form action="">
+        <div class="row">
+            <div class="col">
+                <h3 class="title">billing address</h3>
+                <div class="inputBox">
+                    <span>full name :</span>
+                    <input type="text" placeholder="Zach Josiah" id="usernameOrEmail" required>
+                </div>
+                <div class="inputBox">
+                    <span>email :</span>
+                    <input type="email" placeholder="elybuendia36@gmail.com" id="email" required>
+                </div>
+                <div class="inputBox">
+                    <span>address :</span>
+                    <input type="text" placeholder="Barangay - Street - Locality" id="address" required>
+                </div>
+                <div class="inputBox">
+                    <span>city :</span>
+                    <input type="text" placeholder="Zamboanga" id="city" required>
+                </div>
+                <div class="inputBox">
+                    <span>region :</span>
+                    <input type="text" placeholder="Region" id="region" required>
+                </div>
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>state :</span>
+                        <input type="text" placeholder="Philippines" id="state" required>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h3 class="title">payment</h3>
+                <div class="inputBox">
+                    <span>cards accepted :</span>
+                    <img src="transaction/form.png" alt="">
+                </div>
+                <div class="inputBox">
+                    <span>name on card :</span>
+                    <input type="text" placeholder="Mr. Labang" id="nameOnCard" required>
+                </div>
+                <div class="inputBox">
+                    <span>credit card number :</span>
+                    <input type="number" placeholder="1111-2222-3333-4444" id="creditCardNumber" required>
+                </div>
+                <div class="inputBox">
+                    <span>exp month :</span>
+                    <input type="text" placeholder="january" id="expMonth" required>
+                </div>
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>exp year :</span>
+                        <input type="number" placeholder="2022" id="expYear" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>CVV :</span>
+                        <input type="text" placeholder="1234" id="cvv" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input type="submit" value="proceed to checkout" class="submit-btn" id="checkout-btn" onclick="checkout()">
+    </form>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <h3>BOUANG BOUTIQUE</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <ul class="socials">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>copyright &copy;2020 KMRI. designed by <span>Z&G</span></p>
+    </div>
+</footer>
+
+<script>
+    function redirectToPage() {
+        // Check if all required input fields are valid
+        if (document.getElementById("usernameOrEmail").checkValidity() &&
+            document.getElementById("email").checkValidity() &&
+            document.getElementById("address").checkValidity() &&
+            document.getElementById("city").checkValidity() &&
+            document.getElementById("state").checkValidity() &&
+            document.getElementById("nameOnCard").checkValidity() &&
+            document.getElementById("creditCardNumber").checkValidity() &&
+            document.getElementById("expMonth").checkValidity() &&
+            document.getElementById("expYear").checkValidity() &&
+            document.getElementById("cvv").checkValidity()) {
+            // Redirect to the checkout page
+            window.location.href = "landing.html"; // Replace "checkout.html" with the desired URL
+        } else {
+            // If any required field is invalid, prevent the form submission
+            event.preventDefault();
+            alert("Please fill in all required fields.");
+        }
+    }
+    
+    // Get the user button element
+    const userBtn = document.querySelector('.user-btn');
+
+    // Get the pop-up element
+    const popup = document.getElementById('popup');
+
+    // Show pop-up when clicking on user button
+    userBtn.addEventListener('click', function() {
+        popup.style.display = 'block';
+    });
+
+    // Hide pop-up when clicking outside of it
+    document.addEventListener('click', function(event) {
+        if (!userBtn.contains(event.target) && !popup.contains(event.target)) {
+            popup.style.display = 'none';
+        }
+    });
+  
+</script>
+
+
+</body>
+</html>

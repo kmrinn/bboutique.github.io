@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOUANG | Contact Us</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="wrapper">
+    <nav class="nav">
+      <div class="nav-logo">
+          <img src="../admin/logo.png">
+      </div>
+      <div class="nav-menu" id="navMenu">
+        <ul>
+            <li><a href="landing.html" class="link active">Home</a></li>
+            <li><a href="buypage.html" class="link">Shop</a>
+                
+        </li>
+            <li><a href="index.html" class="link">Account</a></li>
+            <li><a href="Contact.html" class="link">Contact Us</a></li>
+            <li><a href="about.html" class="link">About</a></li>
+        </ul>
+    </div>
+    <div class="nav-button">
+      <div class="user-btn"><img src="../images/icons/account_circle.png"></div>
+      <!-- Pop-up container -->
+      <div class="popup" id="popup">
+          <li><a href="profile.html" class="link"> Profile</a></li>
+          <li><a href="index.html" class="link">Logout</a></li>
+      </div>
+  </div>
+    </nav>
+  </div>
+  <div class="container">
+    <h1>Contact Us Bouang Boutique</h1>
+    <div class="contact-info">
+      <p><strong>Address:</strong> Babaero/Eboy Main Street, Roblox City,  Malagutay PH</p>
+      <p><strong>Email:</strong> hevabi@forthestreets.com</p>
+      <p><strong>Phone:</strong> +1 234-567-890</p>
+    </div>
+    <form action="#" method="post" class="contact-form">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" class="input-field" name="fullname" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" class="input-field" name="email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" class="input-field" rows="4" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+  </div>
+  <footer>
+    <div class="footer-content">
+        <h3> BOUANG BOUTIQUE</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <ul class="socials">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>copyright &copy;2020 KMRI. designed by <span>Z&G</span></p>
+    </div>
+</footer>
+<script>
+ function home() {
+        // Redirect to another page
+        window.location.href = "landing.html"; // Replace "signin.html" with the desired URL
+    }
+    
+    
+    // Get the user button element
+    const userBtn = document.querySelector('.user-btn');
+
+    // Get the pop-up element
+    const popup = document.getElementById('popup');
+
+    // Show pop-up when clicking on user button
+    userBtn.addEventListener('click', function() {
+        popup.style.display = 'block';
+    });
+
+    // Hide pop-up when clicking outside of it
+    document.addEventListener('click', function(event) {
+        if (!userBtn.contains(event.target) && !popup.contains(event.target)) {
+            popup.style.display = 'none';
+        }
+    });
+</script>
+</body>
+</html>

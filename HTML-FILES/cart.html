@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="cart.css" rel="stylesheet">
+    <title>Cart</title>
+</head>
+<body>
+    <div class="wrapper">
+    <nav class="nav">
+        <div class="nav-logo">
+            <img src="../images/logo.png">
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="landing.html" class="link active">Home</a></li>
+                <li><a href="buypage.html" class="link">Shop</a>
+                    
+            </li>
+                 <li><a href="index.html" class="link">Account</a></li>
+                <li><a href="Contact.html" class="link">Contact Us</a></li>
+                <li><a href="about.html" class="link">About</a></li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <div class="user-btn"><img src="../images/icons/account_circle.png"></div>
+            <!-- Pop-up container -->
+            <div class="popup" id="popup">
+                <li><a href="profile.html" class="link">Profile</a></li>
+                <li><a href="index.html" class="link">Logout</a></li>
+            </div>
+        </div>
+        
+    </nav>
+    </div>
+<div class="small-cointainer cart-page">
+        <table id="cart-table">
+            <tbody><tr>
+                <th>Products</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="../images/lube/sce546rr_500x.webp" alt="">
+                        <div>
+                            <p>Redragon A117 Switch Lube</p>
+                            <small>Price: 230.00 PHP</small>
+                            <br>
+                            <a href="#">Remove</a>
+                        </div>
+                    </div>
+
+                </td>
+                <td><input type="number" value="1" min="1"></td>
+                <td>230.00 PHP</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="../images/switches/Kailh-Red-Switch-Set_720x.webp" alt="">
+                        <div>
+                            <p>Kalih Box Red Switches</p>
+                            <small>Price: 1320.00 PHP</small>
+                            <br>
+                            <a href="#">Remove</a>
+                        </div>
+                    </div>
+
+                </td>
+                <td><input type="number" value="1" min="1"></td>
+                <td>1320.00 PHP</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="../images/keyboard pic/lychee g66/image_2024-04-01_141535736.png" alt="">
+                        <div>
+                            <p>Lychee G66</p>
+                            <small>Price: 3500.00 PHP</small>
+                            <br>
+                            <a href="#">Remove</a>
+                        </div>
+                    </div>
+
+                </td>
+                <td><input type="number" value="1" min="1"></td>
+                <td>3500.00 PHP</td>
+            </tr>
+        </tbody></table>
+
+        <div class="total-price">
+            <table>
+                <tbody><tr>
+                    <td>Subtotal</td>
+                    <td id="subtotal">0.00 PHP</td>
+                </tr>
+                <tr>
+                    <td>Shipping Fee</td>
+                    <td id="shipping-fee">0.00 PHP</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td id="total">0.00 PHP</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="btn return-btn" onclick="returnToHomePage()">Return</div> 
+                        <div class="btn" onclick="placeOrder()">Place Order</div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+    </div>
+ 
+    <footer>
+        <div class="footer-content">
+            <h3> BOUANG BOUTIQUE</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2020 KMRI. designed by <span>Z&G</span></p>
+        </div>
+    </footer>
+    <script>
+        function placeOrder() {
+            // Redirect to another page
+            window.location.href = "transform.html";
+        }
+        // Function to calculate subtotal, shipping fee, and total
+function calculateTotal() {
+    // Get all the input elements with quantity
+    var quantityInputs = document.querySelectorAll('input[type="number"]');
+    var subtotal = 0;
+    var shippingFee = 300.00; // Example shipping fee
+    var total = 0;
+
+    // Iterate over each quantity input
+    quantityInputs.forEach(function(input) {
+        var price = parseFloat(input.parentNode.nextElementSibling.textContent); // Get the price of the product
+        var quantity = parseInt(input.value); // Get the quantity
+
+        subtotal += price * quantity; // Calculate subtotal
+    });
+
+    // Calculate total
+    total = subtotal + shippingFee;
+
+    // Update the subtotal, shipping fee, and total in the HTML
+    document.getElementById('subtotal').textContent = subtotal.toFixed(2) + " PHP";
+    document.getElementById('shipping-fee').textContent = shippingFee.toFixed(2) + " PHP";
+    document.getElementById('total').textContent = total.toFixed(2) + " PHP";
+}
+
+// Function to handle quantity change event
+function handleQuantityChange() {
+    calculateTotal(); // Recalculate total whenever quantity changes
+}
+
+// Function to place order
+function placeOrder() {
+    // Redirect to another page
+    window.location.href = "transform.html";
+}
+function returnToHomePage() {
+            // Redirect to home page
+            window.location.href = "buypage.html";
+        }
+
+// Add event listeners to quantity inputs
+var quantityInputs = document.querySelectorAll('input[type="number"]');
+quantityInputs.forEach(function(input) {
+    input.addEventListener('change', handleQuantityChange);
+});
+
+// Initial calculation of total on page load
+calculateTotal();
+
+    
+    // Get the user button element
+    const userBtn = document.querySelector('.user-btn');
+
+    // Get the pop-up element
+    const popup = document.getElementById('popup');
+
+    // Show pop-up when clicking on user button
+    userBtn.addEventListener('click', function() {
+        popup.style.display = 'block';
+    });
+
+    // Hide pop-up when clicking outside of it
+    document.addEventListener('click', function(event) {
+        if (!userBtn.contains(event.target) && !popup.contains(event.target)) {
+            popup.style.display = 'none';
+        }
+    });
+    </script>
+</body>
+</html>

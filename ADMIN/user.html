@@ -1,0 +1,367 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Users</title>
+     <link rel="stylesheet" type="text/css" href="invcss.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" /> 
+ </head>
+ 
+ <body>
+    <div class="wrapper">
+        
+        <nav class="nav">
+            <div class="nav-logo">
+                <img src="../admin/logo.png" alt="">
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="test.html" class="link active"><i class="fas fa-user"></i>Dashboard</a></li>
+                    <li><a href="products.html" class="link"><i class="fas fa-cog"></i>Inventory</a>
+                        <li><a href="user.html" class="link"><i class="fas fa-cog"></i>Users</a>
+                        <li><a href="inventory.html" class="link"><i class="fas fa-cog"></i>Orders</a>
+                     <li><a href="ADMINLOGIN.html" class="link"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+                </ul>
+            </div>
+           
+           
+        </nav>
+    
+     <main class="table" id="customers_table">
+         <section class="table__header">
+             <h1>Users</h1>
+             <div class="input-group">
+                 <input type="search" placeholder="Search Data...">
+                
+             </div>
+            
+         </section>
+         <section class="table__body">
+             <table>
+                 <thead>
+                     <tr>
+                         <th> Id <span class="icon-arrow">&UpArrow;</span></th>
+                         <th> Customer Name <span class="icon-arrow">&UpArrow;</span></th>
+                         <th> Address <span class="icon-arrow">&UpArrow;</span></th>
+                         <th> Order Date <span class="icon-arrow">&UpArrow;</span></th>
+                         <th> Status <span class="icon-arrow">&UpArrow;</span></th>
+                         <th> Order Quantity <span class="icon-arrow">&UpArrow;</span></th>
+                     </tr>
+                 </thead>
+                 <tbody>
+                     <tr>
+                         <td> 1 </td>
+                         <td> <img src="C:\Users\acer\Desktop\BBOUTIQUE\bbout.github.io-main\admin/dean.jpg" alt="">Dean Billy</td>
+                         <td> Malagutay, Zamboanga City </td>
+                         <td> 17 April, 2024 </td>
+                         <td>
+                             <p class="status active">Active</p>
+                         </td>
+                         <td> <strong>1</strong></td>
+                     </tr>
+                     <tr>
+                        <td> 2 </td>
+                        <td><img src="C:\Users\acer\Desktop\BBOUTIQUE\bbout.github.io-main\admin/huesca.jpg" alt=""> Torio Huesca </td>
+                        <td> Guiwan, Zamboanga City </td>
+                        <td> 27 April, 2024 </td>
+                         <td>
+                             <p class="status offline">Offline</p>
+                         </td>
+                         <td> <strong>3</strong> </td>
+                     </tr>
+                     <tr>
+                        <td> 3</td>
+                        <td><img src="C:\Users\acer\Desktop\BBOUTIQUE\bbout.github.io-main\admin/ronaldo.jpg" alt=""> Ronaldo Diff </td>
+                        <td> EAAB, Zamboanga City </td>
+                        <td> 14 April, 2024 </td>
+                         <td>
+                             <p class="status active">Active</p>
+                         </td>
+                         <td> <strong>3</strong> </td>
+                     </tr>
+                     <tr>
+                        <td> 4</td>
+                        <td><img src="C:\Users\acer\Desktop\BBOUTIQUE\bbout.github.io-main\admin/mj.jpg" alt=""> Mary Onnette </td>
+                        <td> Southcom, Zamboanga City </td>
+                        <td> 25 April, 2024 </td>
+                         <td>
+                             <p class="status active">Active</p>
+                         </td>
+                         <td> <strong>5</strong> </td>
+                     </tr>
+                     <tr>
+                        <td> 5</td>
+                         <td><img src="C:\Users\acer\Desktop\BBOUTIQUE\bbout.github.io-main\admin/jasmin.jpg" alt=""> Jasmin Rose </td>
+                         <td> Tumaga, Zamboanga City </td>
+                         <td> 23 Apr, 2024 </td>
+                         <td>
+                             <p class="status active">Active</p>
+                         </td>
+                         <td> <strong>1</strong> </td>
+                     </tr>
+                     <tr>
+                        <td> 6</td>
+                        <td><img src="C:\Users\acer\Desktop\BBOUTIQUE\bbout.github.io-main\admin/bombom.jpg" alt=""> Bomy Bom </td>
+                        <td> Southcom, Zamboanga City </td>
+                        <td> 30 Apr, 2024 </td>
+                         <td>
+                             <p class="status offline">Offline</p>
+                         </td>
+                         <td> <strong>7</strong> </td>
+                     </tr>
+                     <tr>
+                        <td> 7</td>
+                        <td><img src="C:\Users\acer\Desktop\BBOUTIQUE\bbout.github.io-main\admin/wall.jpg" alt=""> Wall Ieh </td>
+                        <td> Sta.Maria, Zamboanga City </td>
+                        <td> 20 April, 2024 </td>
+                         <td>
+                             <p class="status active">Active</p>
+                         </td>
+                         <td> <strong>1</strong> </td>
+                     </tr>
+                     <tr>
+                        <td> 8</td>
+                        <td><img src="C:\Users\acer\Desktop\BBOUTIQUE\bbout.github.io-main\admin/myke.jpg" alt=""> Myke Batusky </td>
+                        <td> Tetuan, Zamboanga City </td>
+                        <td> 30 April, 2024 </td>
+                         <td>
+                             <p class="status offline">Offline</p>
+                         </td>
+                         <td> <strong>3</strong> </td>
+                     </tr>
+                     <tr>
+                        <td> 9</td>
+                        <td><img src="C:\Users\acer\Desktop\BBOUTIQUE\bbout.github.io-main\admin/kaito.jpg" alt=""> Kaito Mitsubishi </td>
+                        <td> Tetuan, Zamboanga City </td>
+                        <td> 30 April, 2024 </td>
+                         <td>
+                             <p class="status active">Active</p>
+                         </td>
+                         <td> <strong>1</strong> </td>
+                     </tr>
+                    
+                 </tbody>
+             </table>
+         </section>
+     </main>
+     <div class="control-buttons">
+        <a href="#"><button class="ctrl-btn">Add</button></a>
+        <a href="#"><button class="ctrl-btn">Edit</button></a>
+        <a href="#"><button class="ctrl-btn">Deactivate</button></a>
+    </div>
+    </div>
+     <script >
+ 
+const search = document.querySelector('.input-group input'),
+    table_rows = document.querySelectorAll('tbody tr'),
+    table_headings = document.querySelectorAll('thead th');
+
+// 1. Searching for specific data of HTML table
+search.addEventListener('input', searchTable);
+
+function searchTable() {
+    table_rows.forEach((row, i) => {
+        let table_data = row.textContent.toLowerCase(),
+            search_data = search.value.toLowerCase();
+
+        row.classList.toggle('hide', table_data.indexOf(search_data) < 0);
+        row.style.setProperty('--delay', i / 25 + 's');
+    })
+
+    document.querySelectorAll('tbody tr:not(.hide)').forEach((visible_row, i) => {
+        visible_row.style.backgroundColor = (i % 2 == 0) ? 'transparent' : '#0000000b';
+    });
+}
+
+// 2. Sorting | Ordering data of HTML table
+
+table_headings.forEach((head, i) => {
+    let sort_asc = true;
+    head.onclick = () => {
+        table_headings.forEach(head => head.classList.remove('active'));
+        head.classList.add('active');
+
+        document.querySelectorAll('td').forEach(td => td.classList.remove('active'));
+        table_rows.forEach(row => {
+            row.querySelectorAll('td')[i].classList.add('active');
+        })
+
+        head.classList.toggle('asc', sort_asc);
+        sort_asc = head.classList.contains('asc') ? false : true;
+
+        sortTable(i, sort_asc);
+    }
+})
+
+
+function sortTable(column, sort_asc) {
+    [...table_rows].sort((a, b) => {
+        let first_row = a.querySelectorAll('td')[column].textContent.toLowerCase(),
+            second_row = b.querySelectorAll('td')[column].textContent.toLowerCase();
+
+        return sort_asc ? (first_row < second_row ? 1 : -1) : (first_row < second_row ? -1 : 1);
+    })
+        .map(sorted_row => document.querySelector('tbody').appendChild(sorted_row));
+}
+
+// 3. Converting HTML table to PDF
+
+const pdf_btn = document.querySelector('#toPDF');
+const customers_table = document.querySelector('#customers_table');
+
+
+const toPDF = function (customers_table) {
+    const html_code = `
+    <!DOCTYPE html>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <main class="table" id="customers_table">${customers_table.innerHTML}</main>`;
+
+    const new_window = window.open();
+     new_window.document.write(html_code);
+
+    setTimeout(() => {
+        new_window.print();
+        new_window.close();
+    }, 400);
+}
+
+pdf_btn.onclick = () => {
+    toPDF(customers_table);
+}
+
+// 4. Converting HTML table to JSON
+
+const json_btn = document.querySelector('#toJSON');
+
+const toJSON = function (table) {
+    let table_data = [],
+        t_head = [],
+
+        t_headings = table.querySelectorAll('th'),
+        t_rows = table.querySelectorAll('tbody tr');
+
+    for (let t_heading of t_headings) {
+        let actual_head = t_heading.textContent.trim().split(' ');
+
+        t_head.push(actual_head.splice(0, actual_head.length - 1).join(' ').toLowerCase());
+    }
+
+    t_rows.forEach(row => {
+        const row_object = {},
+            t_cells = row.querySelectorAll('td');
+
+        t_cells.forEach((t_cell, cell_index) => {
+            const img = t_cell.querySelector('img');
+            if (img) {
+                row_object['customer image'] = decodeURIComponent(img.src);
+            }
+            row_object[t_head[cell_index]] = t_cell.textContent.trim();
+        })
+        table_data.push(row_object);
+    })
+
+    return JSON.stringify(table_data, null, 4);
+}
+
+json_btn.onclick = () => {
+    const json = toJSON(customers_table);
+    downloadFile(json, 'json')
+}
+
+// 5. Converting HTML table to CSV File
+
+const csv_btn = document.querySelector('#toCSV');
+
+const toCSV = function (table) {
+    // Code For SIMPLE TABLE
+    // const t_rows = table.querySelectorAll('tr');
+    // return [...t_rows].map(row => {
+    //     const cells = row.querySelectorAll('th, td');
+    //     return [...cells].map(cell => cell.textContent.trim()).join(',');
+    // }).join('\n');
+
+    const t_heads = table.querySelectorAll('th'),
+        tbody_rows = table.querySelectorAll('tbody tr');
+
+    const headings = [...t_heads].map(head => {
+        let actual_head = head.textContent.trim().split(' ');
+        return actual_head.splice(0, actual_head.length - 1).join(' ').toLowerCase();
+    }).join(',') + ',' + 'image name';
+
+    const table_data = [...tbody_rows].map(row => {
+        const cells = row.querySelectorAll('td'),
+            img = decodeURIComponent(row.querySelector('img').src),
+            data_without_img = [...cells].map(cell => cell.textContent.replace(/,/g, ".").trim()).join(',');
+
+        return data_without_img + ',' + img;
+    }).join('\n');
+
+    return headings + '\n' + table_data;
+}
+
+csv_btn.onclick = () => {
+    const csv = toCSV(customers_table);
+    downloadFile(csv, 'csv', 'customer orders');
+}
+
+// 6. Converting HTML table to EXCEL File
+
+const excel_btn = document.querySelector('#toEXCEL');
+
+const toExcel = function (table) {
+    // Code For SIMPLE TABLE
+    // const t_rows = table.querySelectorAll('tr');
+    // return [...t_rows].map(row => {
+    //     const cells = row.querySelectorAll('th, td');
+    //     return [...cells].map(cell => cell.textContent.trim()).join('\t');
+    // }).join('\n');
+
+    const t_heads = table.querySelectorAll('th'),
+        tbody_rows = table.querySelectorAll('tbody tr');
+
+    const headings = [...t_heads].map(head => {
+        let actual_head = head.textContent.trim().split(' ');
+        return actual_head.splice(0, actual_head.length - 1).join(' ').toLowerCase();
+    }).join('\t') + '\t' + 'image name';
+
+    const table_data = [...tbody_rows].map(row => {
+        const cells = row.querySelectorAll('td'),
+            img = decodeURIComponent(row.querySelector('img').src),
+            data_without_img = [...cells].map(cell => cell.textContent.trim()).join('\t');
+
+        return data_without_img + '\t' + img;
+    }).join('\n');
+
+    return headings + '\n' + table_data;
+}
+
+excel_btn.onclick = () => {
+    const excel = toExcel(customers_table);
+    downloadFile(excel, 'excel');
+}
+
+const downloadFile = function (data, fileType, fileName = '') {
+    const a = document.createElement('a');
+    a.download = fileName;
+    const mime_types = {
+        'json': 'application/json',
+        'csv': 'text/csv',
+        'excel': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+    }
+    a.href = `
+        data:${mime_types[fileType]};charset=utf-8,${encodeURIComponent(data)}
+    `;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+}
+     </script>
+ 
+ </body>
+ 
+ </html>
+ 

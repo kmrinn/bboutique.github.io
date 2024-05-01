@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="loginPage1.css" rel="stylesheet" >
+    <title>Registration</title>
+</head>
+<body>
+ <div class="wrapper">
+    <nav class="nav">
+        <div class="nav-logo">
+            <img src="../images/logo.png">
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="landing.html" class="link active">Home</a></li>
+                <li><a href="buypage.html" class="link">Shop</a>
+                    
+            </li>
+            <li><a href="Contact.html" class="link">Contact Us</a></li>
+                <li><a href="about.html" class="link">About</a></li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+            
+        </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+    <!----------------------------- Form box ----------------------------------->    
+    <div class="form-box">
+        <!------------------- registration form -------------------------->
+        <div class="register-container" id="register">
+            <div class="two-forms">
+                <div class="input-box">
+                    <input type="text" class="input-field" id="firstName" placeholder="First Name">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" id="lastName" placeholder="Last Name">
+                    <i class="bx bx-user"></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" id="email" placeholder="Email">
+                <i class="bx bx-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" id="password" placeholder="Password" required>
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Register" onclick="redirectToPage()">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="register-check">
+                    <label for="register-check"> Remember Me</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Terms & conditions</a></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer-content">
+        <h3> BOUANG BOUTIQUE</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <ul class="socials">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>copyright &copy;2020 KMRI. designed by <span>Z&G</span></p>
+    </div>
+</footer>
+<script>
+    function redirectToPage() {
+        var firstName = document.getElementById("firstName").value;
+        var lastName = document.getElementById("lastName").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+
+        // Check if any input field is empty
+        if (firstName === '' || lastName === '' || email === '' || password === '') {
+            alert("Please fill in all fields before registering.");
+        } else {
+            // Redirect to another page
+            window.location.href = "index.html"; // Replace "loginPage.html" with the desired URL
+        }
+    }
+    function login() {
+            // Redirect to another page
+            window.location.href = "index.html"; // Replace "signin.html" with the desired URL
+        }
+
+        function register() {
+            // Redirect to another page
+            window.location.href = "fek.html"; // Replace "signup.html" with the desired URL
+        }
+</script>
+</body>
+</html>
