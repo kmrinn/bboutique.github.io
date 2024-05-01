@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" type="text/css" href="invcss.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        
+        <nav class="nav">
+            <div class="nav-logo">
+                <img src="../admin/logo.png" alt="">
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="test.html" class="link active"><i class="fas fa-user"></i>Dashboard</a></li>
+                    <li><a href="products.html" class="link"><i class="fas fa-cog"></i>Inventory</a>
+                        <li><a href="user.html" class="link"><i class="fas fa-cog"></i>Users</a>
+                        <li><a href="inventory.html" class="link"><i class="fas fa-cog"></i>Orders</a>
+                     <li><a href="ADMINLOGIN.html" class="link"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+                </ul>
+            </div>
+           
+           
+        </nav>
+    
+    <main class="table">
+        <section class="table__header">
+            <h1>Add Product</h1>
+        </section>
+        <section class="table__body">
+            <form id="addProductForm" class="square-form">
+                <div class="input-group">
+                    <label for="options">Product Options</label>
+                    <select id="options" name="options" required>
+                        <option value="option1">lychee-G66</option>
+                        <option value="option2">Monsgeek M1</option>
+                        <option value="option4">Weikav Sugar65</option>
+                        <option value="option5">kalih-red-switches</option>
+                        <option value="option6">Obliterated75 Case</option>
+                        <option value="option7">Cherry-MX-Stabs</option>
+                        <option value="option8">Redragon A117 Switch Lube</option>
+
+                        
+
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="category">Category:</label>
+                    <select id="category" name="category" required>
+                        <option value="keyboards">Keyboards</option>
+                        <option value="switches">Switches</option>
+                        <option value="cases">Cases</option>
+                        <option value="stabilizers">Stabilizers</option>
+                        <option value="lubes">Lubes</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="price">Price:</label>
+                    <input type="text" id="price" name="price"  required>
+                </div>
+                <div class="input-group">
+                    <label for="stockStatus">Stock Status:</label>
+                    <select id="stockStatus" name="stockStatus" required>
+                        <option value="increasing">Increasing</option>
+                        <option value="decreasing">Decreasing</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="productQuantity">Product Quantity:</label>
+                    <input type="number" id="productQuantity" name="productQuantity" min="0" required>
+                </div>
+                <div class="input-group" style="display: flex; gap: 10px;">
+                    <button type="submit" class="ctrl-btn">Add Product</button>
+                   
+                </div>
+            </form>
+        </section>
+    </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</body>
+
+</html>
